@@ -1,0 +1,159 @@
+.hero {
+  padding: 72px 0 88px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-size: 52px;
+  line-height: 1.06;
+  margin: 14px 0 22px;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 46ch;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* Signature element: a stack of job tickets, fanned like paper on a clipboard */
+.ticket-stack {
+  position: relative;
+  height: 300px;
+}
+
+.ticket {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px -12px rgba(23, 69, 46, 0.25);
+  transform: rotate(calc((var(--i) - 1) * 4deg)) translateY(calc(var(--i) * 14px));
+  animation: settle 0.6s ease backwards;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: rotate(calc((var(--i) - 1) * 4deg)) translateY(calc(var(--i) * 14px + 16px));
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ticket-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.ticket-status {
+  color: var(--forest);
+}
+
+.ticket-job {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--forest-deep);
+  margin-bottom: 4px;
+}
+
+.ticket-crew {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.strip {
+  background: var(--forest-deep);
+  color: var(--paper);
+  padding: 20px 0;
+}
+
+.strip-inner p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  text-align: center;
+}
+
+.features {
+  padding: 88px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.feature h3 {
+  font-size: 22px;
+  margin: 10px 0 12px;
+  line-height: 1.25;
+}
+
+.feature p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.cta {
+  background: var(--paper-dim);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 64px 0;
+}
+
+.cta-inner {
+  text-align: center;
+}
+
+.cta-inner h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.cta-inner p {
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-copy h1 {
+    font-size: 38px;
+  }
+  .ticket-stack {
+    height: 220px;
+    margin-top: 24px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
