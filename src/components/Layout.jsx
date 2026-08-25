@@ -10,14 +10,30 @@ export default function Layout() {
             Fieldnote
           </NavLink>
           <nav className="nav" aria-label="Primary">
-            <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               Home
             </NavLink>
-            <NavLink to="/pricing" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/pricing"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               Pricing
             </NavLink>
-            <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               Contact
+            </NavLink>
+            <NavLink
+              to="/resources"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Resources
             </NavLink>
           </nav>
         </div>
@@ -29,11 +45,15 @@ export default function Layout() {
 
       <footer className="site-footer">
         <div className="inner">
-          <span className="fine">© {new Date().getFullYear()} Fieldnote. A scheduling tool for field crews.</span>
+          <span className="fine">
+            © {new Date().getFullYear()} Fieldnote. A scheduling tool for field
+            crews.
+          </span>
           <div className="foot-links">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/pricing">Pricing</NavLink>
             <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/resources">Resources</NavLink>
           </div>
         </div>
       </footer>
