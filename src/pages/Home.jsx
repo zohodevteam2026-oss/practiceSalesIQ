@@ -1,26 +1,46 @@
 import "./Home.css";
 
-const jobs = [
-  { time: "8:00", crew: "Reyes crew", job: "Water heater install", status: "En route" },
-  { time: "10:30", crew: "Nakamura crew", job: "Panel upgrade", status: "On site" },
-  { time: "1:15", crew: "Okafor crew", job: "Leak inspection", status: "Scheduled" },
+const appointments = [
+  {
+    time: "8:00",
+    crew: "Northstar team",
+    job: "Water heater repair",
+    status: "Confirmed",
+  },
+  {
+    time: "10:30 AM",
+    crew: "Northstar team",
+    job: "AC tune-up",
+    status: "Confirmed",
+  },
+  {
+    time: "1:15 PM",
+    crew: "Northstar team",
+    job: "Kitchen leak repair",
+    status: "Scheduled",
+  },
 ];
 
 const features = [
   {
-    label: "Dispatch",
-    title: "Move a job with a drag, not a phone call",
-    body: "See every crew's day on one board. Reassign a ticket and the crew gets the address, notes, and customer number on their phone immediately.",
+    label: "Plumbing",
+    title: "Repairs that get to the root of the problem",
+    body: "Northstar handles leaks, clogged drains, water heaters, faucets, and other residential plumbing repairs.",
   },
   {
-    label: "Tickets",
-    title: "One ticket, start to close",
-    body: "Photos, parts used, and signed sign-off live on the same ticket the dispatcher opened. Nothing gets re-typed into a second system.",
+    label: "HVAC",
+    title: "Comfort in every season",
+    body: "Our HVAC technicians provide AC repair, heating repair, seasonal tune-ups, and honest replacement advice.",
   },
   {
-    label: "Billing",
-    title: "Invoice from the ticket itself",
-    body: "Closing a job drafts the invoice from logged time and parts. Send it before the truck leaves the driveway.",
+    label: "Service area",
+    title: "Local service across Austin",
+    body: "Northstar serves homeowners throughout Austin and nearby neighborhoods with scheduled and emergency appointments.",
+  },
+  {
+    label: "Our promise",
+    title: "Clear arrival windows and upfront answers",
+    body: "We explain the issue, the recommended repair, and the price before work begins. No confusing technician jargon.",
   },
 ];
 
@@ -30,16 +50,16 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Scheduling for field service teams</span>
+            <span className="eyebrow">Austin plumbing and HVAC</span>
             <h1>
-              Run the crew's day
+              Keep your home
               <br />
-              off one board.
+              running right.
             </h1>
             <p className="lede">
-              Fieldnote replaces the whiteboard, the group chat, and the paper tickets with one
-              schedule your whole team can see — plumbers, electricians, HVAC, and anyone who
-              works out of a truck.
+              Northstar Home Services provides dependable residential plumbing
+              and HVAC repairs, maintenance, and emergency service across
+              Austin. One local team for the systems your home depends on.
             </p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="/pricing">
@@ -52,7 +72,7 @@ export default function Home() {
           </div>
 
           <div className="ticket-stack" aria-hidden="true">
-            {jobs.map((j, i) => (
+            {appointments.map((j, i) => (
               <div className="ticket" key={j.job} style={{ "--i": i }}>
                 <div className="ticket-row">
                   <span className="ticket-time">{j.time}</span>
@@ -68,7 +88,9 @@ export default function Home() {
 
       <section className="strip">
         <div className="container strip-inner">
-          <p>No whiteboard photos texted at 6am. No two tickets for one job.</p>
+          <p>
+            Same-day appointments available. Call Northstar at (512) 555-0148.
+          </p>
         </div>
       </section>
 
@@ -88,10 +110,13 @@ export default function Home() {
 
       <section className="cta">
         <div className="container cta-inner">
-          <h2>Get your crew on one schedule this week.</h2>
-          <p>Set up takes an afternoon. No contract to start.</p>
+          <h2>Need a repair or seasonal tune-up?</h2>
+          <p>
+            Call Monday-Saturday, 7am-7pm. We will find the right appointment
+            for your home.
+          </p>
           <a className="btn btn-primary" href="/contact">
-            Start with your team
+            Book a service visit
           </a>
         </div>
       </section>

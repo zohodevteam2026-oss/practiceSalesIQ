@@ -7,7 +7,7 @@ export default function Layout() {
         <div className="inner">
           <NavLink to="/" className="logo" style={{ borderBottom: "none" }}>
             <span className="mark" aria-hidden="true" />
-            Fieldnote
+            Northstar
           </NavLink>
           <nav className="nav" aria-label="Primary">
             <NavLink
@@ -46,8 +46,8 @@ export default function Layout() {
       <footer className="site-footer">
         <div className="inner">
           <span className="fine">
-            © {new Date().getFullYear()} Fieldnote. A scheduling tool for field
-            crews.
+            © {new Date().getFullYear()} Northstar Home Services. Reliable
+            plumbing and HVAC service in Austin.
           </span>
           <div className="foot-links">
             <NavLink to="/">Home</NavLink>

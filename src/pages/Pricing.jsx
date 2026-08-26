@@ -2,41 +2,46 @@ import "./Pricing.css";
 
 const plans = [
   {
-    name: "Solo",
-    price: "$0",
-    period: "1 crew, forever free",
-    desc: "For a single truck keeping its own schedule.",
-    features: ["1 crew", "Unlimited tickets", "Customer texts", "7-day history"],
-    cta: "Start free",
+    name: "Diagnostic visit",
+    price: "$89",
+    period: "flat visit fee",
+    desc: "For finding the cause of a plumbing or HVAC problem.",
+    features: [
+      "Professional diagnosis",
+      "Written recommendations",
+      "Upfront repair estimate",
+      "Fee credited toward approved repair",
+    ],
+    cta: "Book diagnostic",
     featured: false,
   },
   {
-    name: "Crew",
-    price: "$29",
-    period: "per crew / month",
-    desc: "For teams dispatching more than one truck a day.",
+    name: "Home maintenance",
+    price: "$149",
+    period: "per visit",
+    desc: "For keeping your plumbing and HVAC systems working reliably.",
     features: [
-      "Unlimited crews",
-      "Drag-and-drop dispatch board",
-      "Photo & signature capture",
-      "Invoicing from tickets",
-      "1-year history",
+      "AC or furnace tune-up",
+      "Plumbing system check",
+      "Filter and safety inspection",
+      "Maintenance report",
+      "Priority scheduling",
     ],
-    cta: "Start with Crew",
+    cta: "Book maintenance",
     featured: true,
   },
   {
-    name: "Shop",
-    price: "Let's talk",
-    period: "multi-location",
-    desc: "For shops running several branches or franchises.",
+    name: "Emergency service",
+    price: "From $199",
+    period: "after-hours visit",
+    desc: "For urgent leaks, no cooling, no heat, or burst pipes.",
     features: [
-      "Everything in Crew",
-      "Multiple locations",
-      "Role-based permissions",
-      "Priority phone support",
+      "Evening and weekend response",
+      "Emergency leak control",
+      "Heating and cooling failures",
+      "Clear price before repair",
     ],
-    cta: "Contact sales",
+    cta: "Request emergency help",
     featured: false,
   },
 ];
@@ -46,18 +51,23 @@ export default function Pricing() {
     <section className="pricing">
       <div className="container">
         <div className="pricing-head">
-          <span className="eyebrow">Pricing</span>
-          <h1>Priced by the crew, not the seat</h1>
+          <span className="eyebrow">Service pricing</span>
+          <h1>Simple pricing for a comfortable home</h1>
           <p className="lede">
-            Dispatchers, office staff, and read-only accounts are free on every plan. You only pay
-            for the crews on the road.
+            Northstar gives you a clear visit fee before work begins. The $89
+            diagnostic fee is credited toward an approved repair.
           </p>
         </div>
 
         <div className="plans">
           {plans.map((p) => (
-            <div className={`plan${p.featured ? " featured" : ""}`} key={p.name}>
-              {p.featured && <span className="plan-tag">Most crews pick this</span>}
+            <div
+              className={`plan${p.featured ? " featured" : ""}`}
+              key={p.name}
+            >
+              {p.featured && (
+                <span className="plan-tag">Most homeowners choose this</span>
+              )}
               <h2>{p.name}</h2>
               <div className="plan-price">
                 <span className="amount">{p.price}</span>
@@ -81,7 +91,8 @@ export default function Pricing() {
         </div>
 
         <p className="pricing-note">
-          Every plan includes a 14-day trial. Ask us anything using the chat in the corner.
+          Prices cover labor for the listed visit. Parts and replacement
+          equipment are quoted separately and approved before installation.
         </p>
       </div>
     </section>

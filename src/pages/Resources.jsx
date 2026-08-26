@@ -2,65 +2,81 @@ import "./Resources.css";
 
 const articles = [
   {
-    category: "Dispatch",
-    title: "How to build a field service schedule that survives the day",
+    category: "Plumbing",
+    title: "What to do when a pipe starts leaking",
     excerpt:
-      "A practical way to balance travel time, job length, crew skills, and the inevitable urgent call without starting over at 10am.",
+      "The first steps to limit water damage, find the shutoff valve, and know when a professional should handle the repair.",
     readTime: "6 min read",
   },
   {
-    category: "Operations",
-    title: "The complete checklist for a clean job ticket",
+    category: "HVAC",
+    title: "How often should you service your air conditioner?",
     excerpt:
-      "Capture the details that keep office staff, technicians, and customers on the same page from the first call through sign-off.",
+      "Learn what an AC tune-up includes and why spring maintenance can help your system run more reliably during an Austin summer.",
     readTime: "4 min read",
   },
   {
-    category: "Customer experience",
-    title: "Simple ways to keep customers informed between booking and arrival",
+    category: "Home care",
+    title: "Five signs your water heater needs attention",
     excerpt:
-      "Use clear arrival windows and timely updates to reduce missed appointments and the calls that interrupt your dispatcher's day.",
+      "Watch for unusual noises, rusty water, leaks, and other signs that it is time to schedule a diagnostic visit.",
     readTime: "5 min read",
   },
   {
-    category: "Billing",
-    title: "From completed work to paid invoice: close the loop faster",
+    category: "Emergency help",
+    title: "When should you call for emergency plumbing service?",
     excerpt:
-      "Learn which time, parts, photos, and signatures belong on every completed ticket before a crew leaves the property.",
+      "A quick guide to burst pipes, major leaks, no heat, and no cooling, including what to do before Northstar arrives.",
     readTime: "5 min read",
+  },
+  {
+    category: "Pricing",
+    title: "Understanding Northstar service pricing",
+    excerpt:
+      "See what is included in an $89 diagnostic visit, a $149 maintenance visit, and emergency service from $199.",
+    readTime: "3 min read",
   },
 ];
 
 const faqs = [
   {
-    question: "What kinds of field service teams use Fieldnote?",
+    question: "What services does Northstar Home Services provide?",
     answer:
-      "Fieldnote is built for small field teams such as plumbers, electricians, HVAC contractors, and repair businesses that coordinate work from trucks.",
+      "Northstar provides residential plumbing and HVAC service, including leak repairs, clogged drains, water heaters, AC repair, heating repair, and seasonal tune-ups.",
   },
   {
-    question: "Can I manage multiple crews on one schedule?",
-    answer:
-      "Yes. The dispatch board gives you one view of every crew's day, so you can assign, move, and review jobs without maintaining separate calendars.",
+    question: "Where does Northstar provide service?",
+    answer: "Northstar serves homeowners in Austin and nearby neighborhoods.",
   },
   {
-    question: "What information can technicians add from the job site?",
+    question: "How much does a diagnostic visit cost?",
     answer:
-      "Technicians can add job notes, photos, parts used, logged time, and a customer signature to the same ticket the office created.",
+      "A standard diagnostic visit costs $89. The diagnostic fee is credited toward an approved repair.",
   },
   {
-    question: "Does Fieldnote help with customer updates?",
+    question: "How much does home maintenance cost?",
     answer:
-      "Yes. Customer texts keep people informed about their appointment while the crew's schedule and job details remain in the Fieldnote workspace.",
+      "A home maintenance visit costs $149. It includes an AC or furnace tune-up, a plumbing system check, filter and safety inspection, and a maintenance report.",
   },
   {
-    question: "Can I create an invoice from a completed ticket?",
+    question: "How much does emergency service cost?",
     answer:
-      "Yes. Closing a ticket drafts an invoice using the time and parts recorded during the job, ready for your team to review and send.",
+      "Emergency service starts at $199 for an after-hours visit. Parts and replacement equipment are quoted separately and approved before installation.",
   },
   {
-    question: "How long does setup take?",
+    question: "What are Northstar's service hours?",
     answer:
-      "Most teams can set up their crews, services, and first schedule in an afternoon. You can start with a free Solo plan or begin a 14-day trial.",
+      "Northstar is available Monday through Saturday, from 7am to 7pm. Same-day appointments may be available.",
+  },
+  {
+    question: "What problems qualify as emergency service?",
+    answer:
+      "Burst pipes, major leaks, no cooling, and no heat may qualify for emergency service. Call (512) 555-0148 for help.",
+  },
+  {
+    question: "How can I contact Northstar?",
+    answer:
+      "Email hello@northstarhomes.example, call (512) 555-0148, or use the website chat to request an appointment.",
   },
 ];
 
@@ -69,11 +85,11 @@ export default function Resources() {
     <section className="resources">
       <div className="container">
         <header className="resources-head">
-          <span className="eyebrow">Fieldnote resources</span>
-          <h1>Clearer days in the field start here.</h1>
+          <span className="eyebrow">Northstar homeowner guide</span>
+          <h1>Helpful answers for a comfortable Austin home.</h1>
           <p className="lede">
-            Practical guidance for dispatchers and field crews who want fewer
-            missed details and more jobs finished on time.
+            Clear advice about plumbing repairs, HVAC maintenance, emergency
+            service, and choosing the right appointment.
           </p>
         </header>
 
